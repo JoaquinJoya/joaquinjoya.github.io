@@ -1,0 +1,363 @@
+/*
+  Oh Hello!
+
+  These are some base styles so that our tutorial looks good.
+
+  Let's go through the important bits real quick
+*/
+:root {
+  --titles: #12132F;
+  --black: #272727;
+}
+
+
+
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  /* A system font stack so things load nice and quick! */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: var(--black);
+}
+
+/*
+  WAT IS THIS?!
+  We inherit box-sizing: border-box; from our <html> selector
+  Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+*/
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+
+  min-height: calc(100vh - 100px);
+  margin: 24px 20px;
+  letter-spacing: -1px;
+  font-size: 16px;
+ 
+
+}
+
+
+footer {
+  grid-row: 5;
+}
+
+  .footer-link {
+    margin: 0 16px 0 0;
+    font-size: 16px;
+    color: #9899AB;
+    text-decoration: none;
+    transition: all ease 0.2s;
+  }
+
+    .footer-link:hover {
+      color: #5A5C78;
+    }
+
+
+
+
+
+
+
+/*UI Elements*/
+
+.btn {
+  
+  padding: 16px 24px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff; 
+  background: #3F79E9;
+  border: 0;
+  border-radius: 4px;
+  text-shadow: 0 1px 3px rgba(36, 78, 180, 0.2);
+  box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+  transition: all 0.3s ease ;
+}
+
+  .btn:hover {
+    -webkit-transform: translateY(-1px);
+    transform: translateY(-1px);
+    box-shadow: 0 7px 14px rgba(50,50,93,.1),0 3px 6px rgba(0,0,0,.08);
+    
+  }
+
+
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--titles);
+  line-height: 1.5;
+  margin: 0 0 5px 0;
+}
+
+p {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #5A5C78;
+
+
+}
+
+.main {
+  margin: 0 auto;
+  height: 85vh;
+  display: grid;
+  grid-template-rows: 1fr minmax(50px, 100px) auto max-content 3fr;
+  grid-gap: 24px;
+  align-items: center;
+
+}
+
+  .logo {
+    grid-row: 2;
+    max-width: 70%;
+   
+  }
+
+  .row-1 {
+    grid-row: 3;
+    margin: 0 0 32px 0;
+    
+  }
+
+    .optin {
+      
+      padding: 32px 24px 40px 24px;
+      border-radius: 4px;
+      box-shadow: 0 6px 14px 0 rgba(62, 72, 161, 0.13);
+
+    } 
+
+      .optin_title {
+        font-size:   24px;
+        font-weight: 700; 
+        text-align: center;
+        color: var(--titles);
+
+        margin: 0 0 -12px 0;
+      }
+
+      .optin_text {
+        font-size: 16px;
+        color: #5A5C78;
+        text-align: center;
+      }
+
+      .optin_form {
+        display: flex;
+        flex-direction: column;
+      }
+
+        .form_input-container {
+          display: flex;
+          flex-direction: column;
+          margin: 24px 0 16px 0;
+        }
+
+          .input_label {
+            font-size: 16px;
+            font-weight: 700;
+            color: #20213E;
+            margin: 0 0 8px;
+          }
+
+          .input- {
+            padding: 16px 24px;
+            border: 1px solid #D8DCEA;
+            border-radius: 2px;
+            font-size: 16px;
+            color: #9899AB;
+          }
+
+          input[type="email"]::placeholder {
+            color: #9899AB;
+            font-size: 16px;
+          }
+
+          input[type="email"]:focus {
+            color: rgb(108, 109, 136);
+            font-size: 16px;
+          }
+
+
+
+
+  .row-2 {
+    grid-row: 4;
+  }
+
+
+
+/*MEDIA QUERIES*/ 
+
+
+/*For Phone Only*/
+
+@media (max-width: 559px) {
+
+}
+
+/*For Table Portrait Up*/
+
+@media (min-width: 600px) {
+  /*UI Elements*/
+
+  h1 {
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+
+
+  .main {
+    width: 500px;
+  }
+
+
+    footer {
+      grid-row: 5;
+    }
+
+    .optin_title {
+      font-size: 36px;
+    }
+
+    .optin_text {
+      font-size: 20px;
+    }
+}
+
+/*For Table Landscape Up*/
+
+@media (min-width: 900px) {
+
+  h1 {
+    font-size: 36px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .main {
+    grid-template-columns: 1fr 1fr;
+    width: 800px;
+    grid-gap: 40px;
+
+  }
+
+  footer {
+    grid-row: 4;
+  }
+  
+  .logo {max-width: 100;}
+
+  .row-1 {
+    grid-column: 2;
+  }
+
+    .optin {
+      padding: 40px 32px 80px 32px
+    }
+
+    .optin_title {
+      font-size: 36px;
+    }
+
+    .optin_text {
+      font-size: 20px;
+    }
+
+
+
+  .row-2 {
+    grid-row: 3;
+
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  }
+
+
+}
+
+/*For Desktop Up*/
+
+@media (min-width: 1200px) {
+  /*UI ELements*/
+
+  h1 {
+    font-size: 42px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+
+
+
+  .main {
+    grid-template-columns: 1fr 1fr;
+    width: 1024px;
+    grid-gap: 80px;
+
+  }
+  
+  .logo {max-width: 100;}
+
+  .row-1 {
+    grid-column: 2;
+  }
+
+    .optin {
+      padding: 40px 60px 80px 60px
+    }
+
+    .optin_title {
+      font-size: 40px;
+    }
+
+    .optin_text {
+      font-size: 24px;
+    }
+
+
+
+  .row-2 {
+    grid-row: 3;
+
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  }
+
+
+
+
+
+}
+
+/*For Big Desktop Up*/
+
+@media (min-width: 1800px) {
+
+}
+
+
+  
