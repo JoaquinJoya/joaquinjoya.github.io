@@ -209,6 +209,7 @@
     .main {
         flex-direction: row;
         background-image: url('images/bg-desktop-1200.jpg');
+        background: #2B70D9;
         background-size: cover;
         background-repeat: no-repeat;
         height: 88vh;
@@ -267,6 +268,7 @@
 
     .main {
         background-image: url('images/bg-desktop-1200.jpg');
+        background: #2B70D9;
         background-size: cover;
         background-repeat: no-repeat;
         height: 88vh;
