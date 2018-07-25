@@ -302,6 +302,10 @@
     	color:#404C82;
     }
 
+    .title-2--cursos {
+        margin: 0 0 20px 0;
+    }
+
 	.cursos_text {
 		margin: 0;
 		text-align: center;
