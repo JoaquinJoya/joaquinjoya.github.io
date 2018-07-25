@@ -1,0 +1,715 @@
+/*
+  Oh Hello!
+
+  These are some base styles so that our tutorial looks good.
+
+  Let's go through the important bits real quick
+*/
+:root {
+    --titles: #050C2E;
+    --black: #272727;
+  }
+  
+  /*UI Elements*/
+
+.btn {
+  
+    padding: 16px 24px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff; 
+    background: #0071F9;
+    border: 0;
+    border-radius: 4px;
+    text-shadow: 0 1px 3px rgba(36, 78, 180, 0.2);
+    box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+    transition: all 0.3s ease-in;
+  }
+
+  .btn--b {
+    background: #20284F;
+    color: #fff;
+  }
+
+  .divider {
+  	border: 1px solid #d6def3;
+  }
+  
+    .btn:hover {
+      -webkit-transform: translateY(-1px);
+      transform: translateY(-1px);
+      box-shadow: 0 7px 14px rgba(50,50,93,.1),0 3px 6px rgba(0,0,0,.08);
+      
+    }
+  
+  .title {
+    color: #050C2E;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.2;
+
+  }
+
+  .title-2 {
+    font-size: 26;
+    font-weight: 700;
+    text-align: center;
+    color: #404C82;
+    line-height: 1.2;
+    margin: 0 0 40px 0;
+    }
+
+
+    .card {
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 2px 2px 22px 0 rgba(22, 27, 155, 0.15);
+        padding: 40px 24px 56px 24px;
+        margin: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+        .card_title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #050C2E;
+            margin: 16px 0 8px 0;
+
+        }
+
+        .card_text {
+            margin: 0;
+            color: #848AA6;
+            font-weight: 400;
+            font-size: 18px;
+            text-align: center;
+
+
+        }
+
+
+  
+  html {
+    /* border-box box model allows us to add padding and border to our elements without increasing their size */
+    box-sizing: border-box;
+    /* A system font stack so things load nice and quick! */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+      Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: var(--black);
+  }
+  
+  /*
+    WAT IS THIS?!
+    We inherit box-sizing: border-box; from our <html> selector
+    Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+  */
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+
+
+
+  body {
+  
+    min-height: calc(100vh - 100px);
+    margin: 0;
+    letter-spacing: -1px;
+    font-size: 16px;
+   
+  
+  }
+
+
+  /*---#HERO---*/
+
+    .hero {
+ 		background:#EEF6FF ;
+ 		border-top: 8px solid #0071F9;
+    }
+
+    .hero_wrapper {
+       
+        
+        padding: 60px 24px;
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+
+        .hero_wrapper_one{
+          
+        }
+
+                .hero_text {
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 1.4;
+                    text-align: center;
+                    color: #848CB1 ;
+                }
+        .hero_box{
+            background: #FFF;
+            border-radius: 6px;
+            padding: 24px;
+            box-shadow: 0 5px 22px 0 rgba(22, 55, 176, 0.14);
+            display: flex;
+            flex-direction: column;
+            -ms-align-items: center;
+            align-items: center;
+
+
+        }
+
+            .hero-box_text {
+                font-size: 16px;
+                line-height: 1.5;
+                color: #515877;
+            }
+
+
+/*---#TESTIMONIALS---*/
+
+
+    .testimonials-wrapper {
+        padding: 60px 24px;
+    }
+
+    
+
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        -ms-align-items: center;
+        align-items: center;
+    }
+
+        .testimonial_img {
+            border-radius: 50%;
+            max-width: 100%;
+        }
+    
+
+/*---#POR QUE ELEGIRNOS?*/
+
+.features-wrapper {
+        padding: 60px 24px;
+    }
+
+
+        .illustration-card {
+            max-width: 100%;
+        }
+
+
+
+/*----BANNER----*/
+
+        .banner-container {
+            background: #0071F9;
+            padding: 40px 24px;
+        }
+
+        .banner_title {
+            color: #fff;
+            text-align: center;
+            font-size: 28px;
+            line-height: 1.3;
+        }
+
+
+    .form_input-container {
+        display: flex;
+        flex-direction: column;
+        margin: 24px 0 16px 0;
+      }
+
+        .optin_form {
+            background: #fff;
+            
+            border-radius: 4px;
+            padding: 40px 20px;
+            box-shadow: 0 11px 36px 0 rgba(12, 32, 136, 0.17);
+        }
+
+            .optin_title {
+                font-size:   32px;
+                font-weight: 700;
+                text-align: center;
+                color: #323648;
+                margin: 0 0 -14px 0;
+            }
+
+            .optin_text {
+                font-size: 18px;
+                font-weight: 500;
+                color: #A4A7B8;
+                text-align: center;
+            }
+
+            .input_label {
+
+                color: var(--titles);
+                font-size: 16px;
+                font-weight: 700;
+                margin: 0 0 8px 0;
+            }
+
+            .input- {
+                padding: 16px 24px;
+                margin: 0 0 16px 0;
+                border: 0;
+                box-shadow: 0 2px 6px 0 rgba(29, 82, 144, 0.25);
+                border-radius: 2px;
+                font-size: 16px;
+                color: #9899AB;
+                -webkit-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+              }
+    
+              input[type="email"]::placeholder {
+                color: #9899AB;
+                font-size: 16px;
+              }
+    
+              input[type="email"]:focus {
+                color: rgb(108, 109, 136);
+                font-size: 16px;
+                box-shadow: 0 4px 8px 0 rgba(29, 82, 144, 0.30);
+              }
+
+/*Cursos Container*/
+
+
+.cursos-container {
+    padding: 60px 24px;
+}
+
+    .cursos_title {
+    	text-align: center;
+    	font-size: 28px;
+    	font-weight: 700;
+    	line-height: 1.2;
+		
+    	color:#404C82;
+    }
+
+	.cursos_text {
+		margin: 0;
+		text-align: center;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 1.5;
+		color: #637AA6;
+	}
+
+/*---#FOOTER---*/
+
+footer {
+	background: #7995B7;
+	padding: 	24px;
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+	.copyright {
+		color: #fff;
+		font-weight: 400;
+		font-size: 18px;
+		text-align: center;
+
+
+	}
+
+			.copyright a {
+			 		text-decoration: none;
+			 		color: #fff;
+			 		font-weight: 500;
+			}
+
+		
+
+
+
+/*MEDIA QUERIES*/ 
+
+
+/*For Phone Only*/
+
+@media (max-width: 559px) {
+   .t-f-wrapper {
+	
+	padding: 0 12px;
+}
+}
+
+/*For Table Portrait Up*/
+
+@media (max-width: 899px) and (min-width: 600px) {
+
+	 /*UI KIT*/
+
+
+
+  .title-2 {
+    font-size: 30px;
+    }
+
+ .hero_wrapper {
+	width: 540px;
+	margin: 0 auto;
+	padding: 80px 24px;
+
+}
+
+/*
+	Testimonials
+	Features
+
+*/
+
+
+.t-f-wrapper {
+	width: 540px;
+	margin: 0 auto;
+}
+
+.card {
+			padding: 40px;
+			height: 380px;
+	}
+
+		.card--testimonial {
+			padding: 40px;
+			height: 320px;
+			justify-content: flex-start;
+		}
+
+		/*Banner*/
+
+.banner-wrapper {
+	width: 540px;	
+	margin: 0 auto;
+}
+		.banner_title {
+			font-size: 36px;
+
+		}
+
+			.cursos-container {
+		width: 540px;	
+		margin: 0 auto;
+	}
+
+	
+
+}
+  /*UI Elements*/
+
+  
+
+/*For Table Landscape Up*/
+
+@media (min-width: 900px) {
+
+    /*UI KIT*/
+
+.title {
+    font-size: 46px;
+    text-align: left;
+    margin: 0 0 2px 0
+  }
+
+  .title-2 {
+    font-size: 36px;
+    }
+
+/*HERO*/
+
+.hero_wrapper {
+	width: 860px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 40px;
+	padding: 100px 24px;
+
+}
+
+	.hero_text {
+   	font-size: 22px;
+    text-align: left;
+                }
+	
+	.hero_wrapper_one {
+		display: flex;
+		flex-direction: column;
+		align-self: center;
+	}
+
+	.hero_wrapper_two {
+		margin: 0 0 0 0px;
+	}
+
+	.optin_form {
+		padding: 80px 40px;
+	}
+
+.optin_title {
+	font-size: 46px;
+	color: 
+}
+
+	.optin_text {
+		font-size: 25px;
+	}
+
+		.hero_box {
+			flex-direction: row;
+			padding: 12px 24px;
+		}
+
+			.hero-box_text {
+				font-size: 18px;
+			}
+
+			.hero-box_icon {
+				margin: 0 24px 0 0;
+				width: 160px;
+
+			}
+
+
+/*
+	Testimonials
+	Features
+
+*/
+
+
+.t-f-wrapper {
+	width: 860px;
+	margin: 0 auto;
+}
+
+	.cards-container {
+		flex-direction: row;
+	}
+
+	.card {
+		width: 380px;
+			height: 402px;
+	}
+
+		.card--testimonial {
+			width: 340px;
+			height: 390px;
+			justify-content: flex-start;
+		}
+
+/*Banner*/
+
+.banner-wrapper {
+	width: 622px;	
+	margin: 0 auto;
+}
+
+	.form_input-container--banner {
+		flex-direction: row;
+	}
+
+		.input-banner {
+			min-width: 380px;
+			margin: 0 24px 0 0;
+
+		}
+
+		.btn--banner {
+			min-width: 222px;
+		}
+
+		.banner_title {
+			font-size: 36px;
+
+		}
+
+		/*---#CURSOS---*/
+
+			.cursos-container {
+		width: 622px;	
+		margin: 0 auto;
+	}
+
+		.cursos_text {
+		font-size: 22px;
+		line-height: 1.5;
+	}
+
+}
+
+
+
+
+/*For Desktop Up*/
+
+@media (min-width: 1200px) {
+
+
+/*UI KIT*/
+
+.title {
+    font-size: 46px;
+    text-align: left;
+    margin: 0 0 2px 0
+  }
+
+  .title-2 {
+    font-size: 36px;
+    }
+
+/*HERO*/
+
+.hero_wrapper {
+	width: 1176px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 24px;
+	padding: 100px 24px;
+
+}
+
+	.hero_text {
+   	font-size: 22px;
+    text-align: left;
+                }
+	
+	.hero_wrapper_one {
+		display: flex;
+		flex-direction: column;
+		align-self: center;
+	}
+
+	.hero_wrapper_two {
+		margin: 0 0 0 100px;
+	}
+
+	.optin_form {
+		padding: 120px 40px;
+	}
+
+.optin_title {
+	font-size: 46px;
+	color: 
+}
+
+	.optin_text {
+		font-size: 25px;
+	}
+
+		.hero_box {
+			flex-direction: row;
+			padding: 12px 24px;
+		}
+
+			.hero-box_text {
+				font-size: 18px;
+			}
+
+			.hero-box_icon {
+				margin: 0 24px 0 0;
+				width: 160px;
+
+			}
+/*
+	Testimonials
+	Features
+
+*/
+
+.features-wrapper {
+	padding: 80px 24px;
+}
+
+.testimonials-wrapper {
+	padding: 80px 24px;
+}
+
+
+.t-f-wrapper {
+	width: 1176px;
+	margin: 0 auto;
+}
+
+
+
+	.cards-container {
+		flex-direction: row;
+	}
+
+	.card {
+		width: 380px;
+			height: 402px;
+	}
+
+		.card--testimonial {
+			width: 380px;
+			height: 346px;
+			justify-content: flex-start;
+		}
+
+/*Banner*/
+
+.banner-wrapper {
+	width: 622px;	
+	margin: 0 auto;
+}
+
+	.form_input-container--banner {
+		flex-direction: row;
+	}
+
+		.input-banner {
+			min-width: 380px;
+			margin: 0 24px 0 0;
+
+		}
+
+		.btn--banner {
+			min-width: 222px;
+		}
+
+		.banner_title {
+			font-size: 36px;
+
+		}
+
+
+	/*---#CURSOS---*/	
+
+	.cursos-container {
+		width: 622px;	
+		margin: 0 auto;
+	}
+
+	.cursos_text {
+		font-size: 22px;
+		line-height: 1.5;
+	}
+
+	}
+
+/*For Big Desktop Up*/
+
+@media (min-width: 1800px) {
+
+}
