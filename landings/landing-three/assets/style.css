@@ -266,7 +266,10 @@
                 padding: 16px 24px;
                 margin: 0 0 16px 0;
                 border: 0;
-                box-shadow: 0 2px 6px 0 rgba(29, 82, 144, 0.25);
+                -webkit-box-shadow: 0px 4px 6px 0px rgba(29,82,144,0.25);
+                -moz-box-shadow: 0px 4px 6px 0px rgba(29,82,144,0.25);
+                box-shadow: 0px 4px 6px 0px rgba(29,82,144,0.25);
+
                 border-radius: 2px;
                 font-size: 16px;
                 color: #9899AB;
@@ -283,7 +286,9 @@
               input[type="email"]:focus {
                 color: rgb(108, 109, 136);
                 font-size: 16px;
-                box-shadow: 0 4px 8px 0 rgba(29, 82, 144, 0.30);
+                -webkit-box-shadow: 0px 4px 8px 0px rgba(29,82,144,0.3);
+                -moz-box-shadow: 0px 4px 8px 0px rgba(29,82,144,0.3);
+                box-shadow: 0px 4px 8px 0px rgba(29,82,144,0.3);
               }
 
 /*Cursos Container*/
