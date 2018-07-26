@@ -1,0 +1,231 @@
+
+:root {
+    --titles: #050C2E;
+    --black: #272727;
+  }
+  
+
+
+  
+  html {
+    /* border-box box model allows us to add padding and border to our elements without increasing their size */
+    box-sizing: border-box;
+    /* A system font stack so things load nice and quick! */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+      Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: var(--black);
+  }
+  
+  /*
+    WAT IS THIS?!
+    We inherit box-sizing: border-box; from our <html> selector
+    Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+  */
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+
+
+
+  body {
+  
+    min-height: calc(100vh - 100px);
+    margin: 0;
+    letter-spacing: -1px;
+    font-size: 16px;
+   
+  
+
+  }
+
+
+  footer {
+    background: #7995B7;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    padding: 18px 0;
+  }
+
+  h2 {
+    font-size: 36px;
+    color: #3C4157;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 32px;
+    color: #0071F9;
+  }
+
+  p {
+    font-size: 22px;
+    line-height: 1.5;
+    font-weight: 400;
+    margin: 25px 0;
+    color: #454959;
+
+  }
+
+  .bold {
+    font-weight: 700;
+    color: #050C2E ;
+  }
+
+  .logo {
+    max-width: 100%;
+  }
+
+
+  
+    .wrapper-hero{
+        padding: 0 40px;
+    }
+
+.container {
+        padding: 80px 0;
+    }
+    
+
+
+    .title {
+        font-size: 50px;
+        font-weight: 700;
+        color: #050C2E;
+    }
+ 
+.banner {
+    background: #EEF6FF;
+    padding: 80px 24px;
+
+}
+
+    .btn {
+        padding: 22px 55px;
+        background: #0071F9;
+        border-radius: 4px;
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12);
+        transition: all 0.3s ease;
+        border: none;
+        margin: 0 auto;
+    }
+
+        .btn:hover {
+            box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+            transform: translateY(-1px);
+        }
+
+        .btn a {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*MEDIA QUERIES*/ 
+
+
+/*For Phone Only*/
+
+@media (max-width: 559px) {
+    .title {
+        font-size: 32px
+
+    }
+
+    h2 {
+        font-size:24px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .btn {
+        padding: 18px 40px;
+    }
+
+    .btn a {
+        font-size: 18px;
+    }
+
+.container {
+        
+        padding: 60px 0;
+    }
+
+}
+
+/*For Table Portrait Up*/
+
+@media (max-width: 899px) and (min-width: 600px) {
+
+	.container {
+        width: 500px;
+        margin: 0 auto;
+        padding: 60px 0;
+    }
+
+     .container-banner {
+        width: 500px;
+        margin: 0 auto;
+}
+
+	
+
+}
+ 
+
+/*For Table Landscape Up*/
+
+@media (min-width: 900px) {
+ .container {
+        width: 680px;
+        margin: 0 auto;
+    }
+
+     .container-banner {
+        width: 800px;
+        margin: 0 auto;
+}
+   
+
+}
+
+
+
+
+/*For Desktop Up*/
+
+@media (min-width: 1200px) {
+
+  .container {
+        width: 680px;
+        margin: 0 auto;
+    }
+
+     .container-banner {
+        width: 800px;
+        margin: 0 auto;
+}
+
+}
+
+/*For Big Desktop Up*/
+
+@media (min-width: 1800px) {
+
+}
